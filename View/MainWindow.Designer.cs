@@ -36,6 +36,7 @@ namespace B2J.View
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.textBoxLoadedFiles = new System.Windows.Forms.TextBox();
             this.textBoxSavedFiles = new System.Windows.Forms.TextBox();
+            this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.SuspendLayout();
             // 
             // openFileButton
@@ -120,6 +121,7 @@ namespace B2J.View
         private FlowLayoutPanel flowLayoutPanel;
         private TextBox textBoxLoadedFiles;
         private TextBox textBoxSavedFiles;
+        private FolderBrowserDialog folderBrowserDialog;
     }
 }
 

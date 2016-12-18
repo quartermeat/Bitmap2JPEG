@@ -34,11 +34,15 @@ namespace B2J.View
         {
             textBoxSavedFiles.Clear();
 
+            if (folderBrowserDialog.ShowDialog() != DialogResult.OK) return;
+
+            //MessageBox.Show(folderBrowserDialog.SelectedPath);
+
             foreach(var fileName in openFileDialog.FileNames)
             {
                 using (var image = Image.FromFile(fileName))
                 {
-                    string saveName = Path.GetDirectoryName(fileName) + @"\" + Path.GetFileNameWithoutExtension(fileName) + ".jpeg";
+                    string saveName = folderBrowserDialog.SelectedPath + @"\" + Path.GetFileNameWithoutExtension(fileName) + ".jpeg";
                     image.SaveJpeg(saveName, 100);
                     textBoxSavedFiles.AppendText(saveName + "\n");
                 }
