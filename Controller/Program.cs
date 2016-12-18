@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using B2J.View;
 
-namespace B2J
+namespace B2J.Controller
 {
     static class Program
     {

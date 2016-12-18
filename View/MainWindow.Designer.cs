@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace B2J
+namespace B2J.View
 {
     partial class MainWindow
     {
@@ -31,19 +31,20 @@ namespace B2J
         private void InitializeComponent()
         {
             this.openFileButton = new System.Windows.Forms.Button();
-            this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.textBoxLoadedFiles = new System.Windows.Forms.TextBox();
+            this.textBoxSavedFiles = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // openFileButton
             // 
-            this.openFileButton.Location = new System.Drawing.Point(12, 12);
+            this.openFileButton.Location = new System.Drawing.Point(12, 8);
             this.openFileButton.Name = "openFileButton";
-            this.openFileButton.Size = new System.Drawing.Size(114, 29);
+            this.openFileButton.Size = new System.Drawing.Size(102, 33);
             this.openFileButton.TabIndex = 0;
-            this.openFileButton.Text = "Open File";
+            this.openFileButton.Text = "Open Files";
             this.openFileButton.UseVisualStyleBackColor = true;
             this.openFileButton.Click += new System.EventHandler(this.openFileButton_Click);
             // 
@@ -57,28 +58,50 @@ namespace B2J
             // saveButton
             // 
             this.saveButton.Enabled = false;
-            this.saveButton.Location = new System.Drawing.Point(12, 153);
+            this.saveButton.Location = new System.Drawing.Point(12, 150);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(102, 33);
             this.saveButton.TabIndex = 2;
-            this.saveButton.Text = "Save";
+            this.saveButton.Text = "Save Files";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // flowLayoutPanel
             // 
             this.flowLayoutPanel.AutoSize = true;
-            this.flowLayoutPanel.Location = new System.Drawing.Point(12, 47);
+            this.flowLayoutPanel.Location = new System.Drawing.Point(148, 12);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(200, 100);
+            this.flowLayoutPanel.Size = new System.Drawing.Size(114, 29);
             this.flowLayoutPanel.TabIndex = 3;
+            // 
+            // textBoxLoadedFiles
+            // 
+            this.textBoxLoadedFiles.Location = new System.Drawing.Point(12, 47);
+            this.textBoxLoadedFiles.Multiline = true;
+            this.textBoxLoadedFiles.Name = "textBoxLoadedFiles";
+            this.textBoxLoadedFiles.ReadOnly = true;
+            this.textBoxLoadedFiles.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxLoadedFiles.Size = new System.Drawing.Size(354, 97);
+            this.textBoxLoadedFiles.TabIndex = 4;
+            // 
+            // textBoxSavedFiles
+            // 
+            this.textBoxSavedFiles.Location = new System.Drawing.Point(12, 189);
+            this.textBoxSavedFiles.Multiline = true;
+            this.textBoxSavedFiles.Name = "textBoxSavedFiles";
+            this.textBoxSavedFiles.ReadOnly = true;
+            this.textBoxSavedFiles.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxSavedFiles.Size = new System.Drawing.Size(354, 97);
+            this.textBoxSavedFiles.TabIndex = 5;
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(232, 203);
+            this.ClientSize = new System.Drawing.Size(378, 303);
+            this.Controls.Add(this.textBoxSavedFiles);
+            this.Controls.Add(this.textBoxLoadedFiles);
             this.Controls.Add(this.flowLayoutPanel);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.openFileButton);
@@ -92,10 +115,11 @@ namespace B2J
         #endregion
 
         private System.Windows.Forms.Button openFileButton;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private Button saveButton;
         private FlowLayoutPanel flowLayoutPanel;
+        private TextBox textBoxLoadedFiles;
+        private TextBox textBoxSavedFiles;
     }
 }
 

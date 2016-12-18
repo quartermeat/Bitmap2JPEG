@@ -1,8 +1,8 @@
 c:\users\jeremy\documents\visual studio 2013\Projects\B2J\B2J\bin\Debug\B2J.exe.config
 c:\users\jeremy\documents\visual studio 2013\Projects\B2J\B2J\bin\Debug\B2J.exe
 c:\users\jeremy\documents\visual studio 2013\Projects\B2J\B2J\bin\Debug\B2J.pdb
-c:\users\jeremy\documents\visual studio 2013\Projects\B2J\B2J\obj\Debug\B2J.MainWindow.resources
 c:\users\jeremy\documents\visual studio 2013\Projects\B2J\B2J\obj\Debug\B2J.Properties.Resources.resources
 c:\users\jeremy\documents\visual studio 2013\Projects\B2J\B2J\obj\Debug\B2J.csproj.GenerateResource.Cache
 c:\users\jeremy\documents\visual studio 2013\Projects\B2J\B2J\obj\Debug\B2J.exe
 c:\users\jeremy\documents\visual studio 2013\Projects\B2J\B2J\obj\Debug\B2J.pdb
+C:\Users\Jeremy\documents\visual studio 2013\Projects\B2J\B2J\obj\Debug\B2J.View.MainWindow.resources
