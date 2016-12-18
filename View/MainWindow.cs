@@ -36,8 +36,11 @@ namespace B2J.View
 
             if (folderBrowserDialog.ShowDialog() != DialogResult.OK) return;
 
-            //MessageBox.Show(folderBrowserDialog.SelectedPath);
+            saveButton.Enabled = false;
+            openFileButton.Enabled = false;
 
+            Cursor.Current = Cursors.WaitCursor;
+            
             foreach(var fileName in openFileDialog.FileNames)
             {
                 using (var image = Image.FromFile(fileName))
@@ -47,9 +50,10 @@ namespace B2J.View
                     textBoxSavedFiles.AppendText(saveName + "\n");
                 }
             }
-            
+
+            Cursor.Current = Cursors.Default;
             openFileDialog.Dispose();
-            saveButton.Enabled = false;
+            openFileButton.Enabled = true;
         }
 
     }
